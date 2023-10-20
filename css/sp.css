@@ -1,0 +1,375 @@
+@media screen and (max-width: 640px) {
+
+
+h2{
+  margin:5% 0 5% 0;
+}
+
+/*menue*/
+
+.menu{
+  position: fixed;
+  z-index: 1005;
+ 
+}
+
+.sp-menu{
+
+}
+
+
+
+/* ハンバーガーメニューのボタン */
+.sp-menu__box {
+  position: fixed;  /* 位置を固定 */
+  top: 0;  /* 最上部 */
+  right: 0;  /* 右端 */
+  /* 中の要素を上下中央寄せ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* サイズ指定 */
+  height: 60px;
+  width: 60px;
+  /* 最前面にする */
+  z-index: 100;
+  background-color: #696969;
+}
+
+
+/* メニューの白線を疑似要素を使って3本作成 */
+.sp-menu__box span,         /* 真ん中の線 */
+.sp-menu__box span:before,  /* 上の線 */
+.sp-menu__box span:after {  /* 下の線 */
+  /* contentの値を指定しないと疑似要素が生成されない */
+  content: "";
+  /* ３本線のサイズと色を指定 */
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  /* 3本線の位置は絶対位置で指定 */
+  position: absolute;
+}
+
+/* 上の線の位置 */
+.sp-menu__box span:before {
+  /* 真ん中の線と離す距離 */
+  bottom: 8px;
+}
+
+/* 下の線の位置 */
+.sp-menu__box span:after {
+  /* 真ん中の線と離す距離 */
+  top: 8px;
+}
+
+/* チェックボックスは常に非表示 */
+#sp-menu__check {
+  display: none;
+}
+
+/* チェックボックスのチェックがON（スマホ用メニューを開いた状態） */
+/* 真ん中の線 */
+#sp-menu__check:checked ~ .sp-menu__box span {
+  /* 透明にして見えなくする */
+  background: rgba(255, 255, 255, 0);
+}
+
+/* 上の線 */
+#sp-menu__check:checked ~ .sp-menu__box span::before {
+  /* 真ん中の線との距離を無くす（真ん中の線と同じ位置にする） */
+  bottom: 0;
+  /* 右に45度傾けてバツの片側の線にする */
+  transform: rotate(45deg);
+}
+
+/* 下の線 */
+#sp-menu__check:checked ~ .sp-menu__box span::after {
+  /* 真ん中の線との距離を無くす（真ん中の線と同じ位置にする） */
+  top: 0;
+  /* 左に45度傾けてバツの片側の線にする */
+  transform: rotate(-45deg);
+}
+
+
+
+
+/* スマホ用メニュー */
+.sp-menu__content {
+  /* 絶対位置で指定   */
+  position: fixed;
+  /* 画面全体に表示 */
+  width: 100%;
+  height: 100%;
+  /* 開始位置は左上隅 */
+  top: 0;
+  left: 0;
+  /* 前面に表示するがハンバーガーボタンよりは背後 */
+  z-index: 90;
+  background-color: #3584bb;
+}
+/* スマホ用メニューのリスト */
+.sp-menu__list {
+  padding: 70px 10px 0;
+}
+/* スマホ用メニュー項目 */
+.sp-menu__item {
+  border-bottom: solid 1px #969696;
+  list-style: none;
+}
+
+/* スマホ用メニュー項目のリンク */
+.sp-menu__link {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+}
+
+/* ハンバーガーボタンを押してチェックがONの時だけ
+   スマホ用メニューを画面左側に移動する */
+#sp-menu__check:checked ~ .sp-menu__content {
+  left: 30%;
+}
+/* 変更箇所はコメントの項目のみ */
+.sp-menu__content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 10px 10px 10px 8px;
+
+
+  /* 普段は画面外にするために左端を画面右端の位置にする */
+  left: 105%;
+
+  z-index: 90;
+  background-color: #fff;
+  
+  /* 右端からゆっくり移動するように表示 */
+  transition: all 0.5s;
+
+}
+
+.sp-menu__content.hide{
+    transform: translate(100%, 0);
+}
+
+
+/* 指定されていたら非表示 */
+.nosp {
+	display: none;
+}
+
+#container{
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.navi01, .navi01 a, .navi02, .navi02 a, .navi03, .navi03 a, .navi04, .navi04 a{
+	color:#333;  
+}
+
+.header .link ul:after {
+	/* liの回り込み解除 */
+	clear: both;
+}
+
+
+.menu .navi01, .menu .navi04,.menu .navi02, .menu .navi03{
+	font-weight: 200;
+	padding-top:10px;
+	padding-bottom:4px;
+  line-height: 1.7em;
+  padding-left: 2.1em;
+  padding-right:5px;
+  text-indent: -1.5em;
+}
+
+.navi01, .navi02, .navi03, .navi04{
+  height:42px;
+}
+
+.menu li img{
+  width:15px;
+  margin-right: 4%;
+  position: relative;
+  top:-2px;
+}
+
+.mainvisual{
+  position: relative;
+  top:0px;
+
+}
+
+#my_Name{
+  background-color: #e7e7e7;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+#my_Name h2{
+  font-size:0.9em;
+  border-bottom-style: solid;
+  border-color: #678;
+  border-width: 1.1px;
+  padding-bottom: 2%;
+  margin:6% 28% 5% 28%;
+
+}
+
+#area01{
+  overflow: hidden;
+  margin-top:20%;
+}
+
+table{
+  margin:5px 0 20px 0;
+  background-color: #FFFFFF; 
+}
+
+td, .tr3{
+  font-size:0.7em;
+  padding:5px 0;
+  line-height: 1.4em;
+}
+
+.center b{
+  font-size:1em;
+}
+
+.center{
+  font-size:0.8em;
+  padding:5px 1% 5px 5%;
+}
+
+.tr3{
+  text-align: center;
+  padding: 0 0.5%;
+}
+
+
+#area01 h2, #area02 h2, #area03 h2, #area04 h2{
+  display:block;
+  text-align: center;
+  font-size:1.2em;
+  padding: 2%;
+  position: relative;
+  line-height: 1.5em;
+}
+
+
+#area01 content_left{
+  position: relative;
+}
+
+#area01 img{
+  position: relative;
+  top:3px;
+  display: block;
+  height: auto;
+  width:80%;
+  margin: 0 auto 3% auto;
+}
+
+
+#area01 h3, #area02 h3, #area03 h3{
+  font-size:1.1em;
+}
+
+.area01 p{
+  line-height: 1.6em;
+  font-size: 0.85em;
+}
+
+
+#area02{
+  overflow: hidden;
+}
+
+#area02 img, #area03 img{
+  position: relative;
+  top:4px;
+  height: 50px;
+  width:auto;
+  margin-bottom: 3%;
+}
+
+#area02 .zigen img{
+  height: 80px;
+  width:auto;
+  left: -2%;
+  top:-3%;
+  margin-bottom: 0%;
+}
+
+#area02 .blacklane img{
+  left: -1.5%;
+}
+
+#area02 .innerWidth_contents, 
+#area03 .innerWidth_contents{
+  margin-bottom: 7%;
+}
+
+#area02 p, #area03 p{
+line-height: 1.6em;
+}
+
+#area03{
+  overflow: hidden;
+}
+
+#area03 img{
+  position: relative;
+  top:4px;
+  height: auto;
+  width:73px;
+  margin-bottom: 3%;
+}
+
+
+.innerWidth_footer{
+  height: auto;
+  margin:0px auto;
+  overflow: hidden;
+  width: 80%;
+}
+
+
+.footer .logo{
+  padding-bottom: 30px;
+}
+
+.footer .logo img{
+  position: relative;
+  width: 22%;
+}
+
+.footer_github, .footer_Linkedin, .twitter_x{
+  float: left;
+  margin-right: 4%;
+  position: relative;
+}
+
+.footer_logo{
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  margin: 0 auto 5px auto;
+}
+
+
+
+}

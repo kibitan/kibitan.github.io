@@ -1,18 +1,430 @@
 <!DOCTYPE html>
-    <head>
-      <title>chikahirotokoro.com</title>
-      <meta http-equiv="refresh" content="0; url=https://chikahirotokoro.mystrikingly.com/" />
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKTZCHQXPY"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="ja">
+<head>
 
-        gtag('config', 'G-FKTZCHQXPY');
-      </script>
-    </head>
-    <body>
-        <p>Please follow <a href="https://chikahirotokoro.mystrikingly.com/">this link</a></p>
-    </body>
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
+<!-- End Google fonts -->
+
+<title>CHIKAHIRO TOKORO</title>
+<link rel="icon" type="image/x-icon" href="./image/logo_chika.png">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<meta name="keywords" content="" />
+<meta charset="UTF-8" />
+<link rel="shortcut icon" href="">
+<link rel="stylesheet" media="all" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" media="all" type="text/css" href="css/common.css" />
+<link rel="stylesheet" media="all" type="text/css" href="css/pc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="css/sp.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- JavaScriptの読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./modal/modal-multi.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		//スクロール
+		$('a[href^=#]').click(function(){
+			var speed = 1200;
+			var href= $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			if (screen.width > 769) {
+				position = position - 100;
+			} else {
+				position = position - 80;
+			}
+			$("html, body").animate({scrollTop:position}, speed, "swing");
+			return false;
+		});
+		//ビデオ再生
+		// $('.area04b').click(function(){
+		// 	video.play();
+		// });
+		//ビデオ停止
+		// $('.stopBtn img').click(function(){
+		// 	video.stop();
+		// });
+	});
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKTZCHQXPY"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-FKTZCHQXPY');
+</script>
+</head>
+
+<body>	
+	<div id="container">
+	<div class="menu nopc">
+		
+    	<!-- <input id="menu-cb" type="checkbox" value="off"> -->
+
+		<!-- <label id="menu-icon" for="menu-cb"><img src="" /></label> -->
+		<div class="sp-menu">
+			<input type="checkbox" id="sp-menu__check">
+			<label for="sp-menu__check" class="sp-menu__box">
+	        	<span></span>
+	      	</label>
+	   
+		<!-- <label id="menu-background" for="sp-menu__check"></label> -->
+			<div class="sp-menu__content ">
+	    		<ul class="sp-menu__list">
+	        		<li class="navi01 sp-menu__item"><a href="#area01" class="sp-menu__link ">WHAT I'VE DONE</a></li>
+	       		 	<li class="navi02 sp-menu__item"><a href="#area02" class="sp-menu__link ">CAREER</a></li>
+	        		<li class="navi03 sp-menu__item"><a href="#area03" class="sp-menu__link ">EDUCATION</a></li>
+	        		<li class="navi04 sp-menu__item"><a href="#area04" class="sp-menu__link ">GET IN TOUCH</a></li>
+	    		</ul>
+			</div>
+		</div>
+	</div>
+		<div id="header">
+			<div class="innerWidth_header nosp">
+				<div class="link">
+					<ul>
+						<li>
+							
+						</li>
+						<li class="navi01"><a href="#area01">WHAT I'VE DONE</a></li>
+						<li class="navi02"><a href="#area02">CAREER</a></li>
+						<li class="navi03"><a href="#area03">EDUCATION</a></li>
+						<li class="navi04"><a href="#area04">GET IN TOUCH</a></li>
+					</ul>
+ 				</div>
+ 				<div class="logo" >
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="my_Name" id="my_Name">
+			<div class="innerWidth_my_Name">
+				<div class="logo nosp">
+					<img src="./image/logo_chika.png" alt="logo" />
+				</div>
+				<h2>CHIKAHIRO TOKORO</h2>
+			</div>
+		</div>
+		<div class="area01" id="area01">
+			<h2>- What I've done -</h2>
+			<div class="innerWidth_contents">
+				<div class="content_left">
+					<img src="./image/what_ive_done.jpg" alt="What I've done"/>
+				</div>
+				<div class="content_right">
+					<h3>as a Software Engineer</h3>
+					<table>
+						<tr>
+							<td class="tr3">
+								<b>Jul. 2023</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://www.linkedin.com/posts/blacklane-gmbh_blacklane-teamintroduction-productteam-activity-7090605911655731200-OYMp" >
+										(Video shoot) This is Blacklane's Product and Engineering Team!
+										</a>
+									</span>
+								</b>
+								<br>at <a href="https://www.linkedin.com/company/blacklane-gmbh/" >Blacklane LinkedIn</a>
+							</td>
+						</tr>
+						<tr class="tr2">
+							<td class="tr3">
+								<b>Sep. 2019</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://medium.com/@blacklane_engineering/blacklane-developer-journeys-chikahiro-senior-backend-developer-c0ff290c7aa8" >Blacklane Developer Journeys: Chikahiro — Senior Backend Developer
+										</a>
+									</span>
+								</b>
+								<br>at <a href="https://medium.com/@blacklane_engineering" >Blacklane Engineering</a>
+							</td>	
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>Jul. 2018</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://www.amazon.co.jp/dp/4532182603" >日経MOOK フリーランス＆“複”業で働く完全ガイド (インタビュー掲載)
+										</a>
+									</span>
+								</b>
+							</td>	
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>May. 2018</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://blog.freelance-jp.org/20180510-1926/" > フリーランスから海外で就職！</a>
+									</span>
+								</b>
+								<br>at <a href="https://blog.freelance-jp.org/" >フリーランス協会ブログ / Japan Freelance Association Official Blog</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>May. 2017</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://www.businessinsider.jp/post-33528" >エンジニア&ウェブデザイナー夫婦が30代を前にした決断とは</a>
+									</span>
+								</b>
+								<br>at <a href="https://www.businessinsider.jp/" >BUSINESS INSIDER JAPAN</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>Dec. 2014</b>
+							</td>
+							<td class="center">
+								<b>
+									<span> (ラジオゲスト出演) インドのシリコンバレー「バンガロール」は世界に変革をもたらすか</span>
+								</b>
+								<br>at <a href="" >TIME LINE -今日のニュースと考えるヒント- TOKYO FM 80.0MHz</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>Sep. 2014</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://magazine.rubyist.net/articles/0049/0049-Bangalore.html" >「インドのシリコンバレー」バンガロールの IT コミュニティ事情</a>
+									</span>
+								</b>
+								<br><a href="https://magazine.rubyist.net/articles/0049/0049-Bangalore_en.html" >(English) "Indian Silicon Valley" Bangalore's community of Engineer</a>
+								<br>at <a href="https://magazine.rubyist.net/" >Rubyist Magazine</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>Aug. 2014</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://www.huffingtonpost.jp/crowdworksworkstyle/bangalore-3_b_5595042.html" >みんな知らない"インドのシリコンバレー" バンガロールIT旅行記 (1)</a> / 
+										<a href="https://www.huffingtonpost.jp/crowdworksworkstyle/2_b_5595353.html">(2)</a> / 
+										<a href="https://www.huffingtonpost.jp/crowdworksworkstyle/bangalore-2_b_5609195.html">(3)</a> / 
+										<a href="https://www.huffingtonpost.jp/crowdworksworkstyle/bangalore-1_b_5616802.html">(4) </a>/ 
+										<a href="https://www.huffingtonpost.jp/crowdworksworkstyle/bangalore_b_5622782.html">(5)</a> /
+										<a href="https://www.huffingtonpost.jp/crowdworksworkstyle/bangalore-4_b_5702254.html"> (6)</a>
+									</span>
+								</b>
+								<br>at <a href="https://www.huffingtonpost.jp/" >Huffingtonpost Japan</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="tr3">
+								<b>Jun. 2013</b>
+							</td>
+							<td class="center">
+								<b>
+									<span>
+										<a href="https://www.youtube.com/watch?v=uN8F2wpnBnE" >Image resizing and cache Engine by Sinatra</a>
+									</span>
+								</b>
+								<br>at <a href="https://rubykaigi.org/2013/lightning_talks/#kibitan" >RubyKaigi 2013 Lighitning Talk Speaker</a>
+								<br>at <a href="https://www.flickr.com/photos/hasgeek/sets/72157644690558526/with/14222750355/" >rootconf 2014 Flash Talk</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="innerWidth_contents">
+				<div class="content_left">
+					<img src="./image/travel.webp" alt="What I've done"/>
+				</div>
+				<div class="content_right">
+					<h3>as a Traveller</h3>
+					<p>
+						<b>- Asia -</b>
+						<br>🇰🇭 Cambodia, 🇮🇳 India(8), 🇮🇩 Indonesia(2), 🇲🇾 Malaysia(3), 🇲🇻 Maldives(3), 🇳🇵 Nepal(3), 🇸🇬 Singapore(3), 🇱🇰 Sri Lanka(2),🇹🇭 Thailand(3)
+					</p>
+					<p>
+						<b>- Europe -</b>
+						<br>🇦🇹 Austria(2), 🇧🇪 Belgium, 🇨🇿 Czech, 🇩🇰 Denmark, 🇩🇪 Germany(living), 🇬🇷 Greece, 🇭🇺 Hungary, 🇮🇹 Italy, 🇳🇱 Netherlands(2), 🇵🇱 Poland, 🇪🇸 Spain(3), 🇸🇪 Sweden, 🇨🇭 Switzerland, 🇻🇦 Vatican City
+					</p>
+					<p>
+						<b>- South America -</b>
+						<br>🇵🇪 Peru
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="area02" id="area02">
+			<h2>- CAREER -</h2>
+			<div class="innerWidth_contents blacklane">
+				<div class="content_left">
+					<img src="./image/blacklane_logo.jpg" alt="blacklane"/>
+				</div>
+				<div class="content_right">
+					<h3><a href="https://www.blacklane.com/en/" >Blacklane GmbH</a></h3>
+					<p>
+						<b>Feb. 2018 - Present</b>
+						<br>Senior Backend Engineer / Tech Lead (interim)
+						<br>at Berlin, Germany
+					</p>
+					
+				</div>
+			</div>
+			<div class="innerWidth_contents">
+				<div class="content_left">
+					<img src="./image/logo_freelance.png" alt="Freelance"/>
+				</div>
+				<div class="content_right">
+					<h3><a href="https://www.freelance-jp.org/" >Freelance Association Japan
+					<br><span class="Japanese">プロフェッショナル＆パラレルキャリア
+					<br>フリーランス協会</span></a></h3>
+					<p>
+						<b>Apr. 2017 - Mar. 2019</b>
+						<br>Web production team / WEB制作チーム
+						<br>at Tokyo, Japan / Berlin, Germany
+					</p>		
+				</div>
+			</div>
+			<div class="innerWidth_contents">
+				<div class="content_left fleelance_chika">
+					<img  src="./image/logo_chika.png" alt="Freelance"/>
+				</div>
+				<div class="content_right">
+					<h3>Freelance Web Engineer</h3>
+					<p>
+						<b>Feb. 2013 - Jan. 2018</b>
+						<br>Software Engineer / エンジニア
+						<br>at Tokyo, Japan
+					</p>
+					<p>
+						<b>Jan. 2015 - Apr. 2017</b>
+						<br>Worked with <a href="https://crowdworks.co.jp/" >CrowdWorks / 株式会社クラウドワークス</a>
+					</p>
+					<p>寄稿記事:
+					<br><a href="https://engineer.crowdworks.jp/entry/2016/08/29/111434">- エラーモニタリングサービス Rollbar と GitHub Issue を利用したエラー対応フロー</a>
+					<br><a href="https://engineer.crowdworks.jp/entry/2016/07/13/144615">- フレームワークのアップグレードにおけるテスト戦略とリリース戦略</a>
+					<br><a href="https://engineer.crowdworks.jp/entry/rails-upgrade-casual-talks_2">- CW Tech Meetup #01: Rails Upgrade Casual Talks</a>
+					<br><a href="https://engineer.crowdworks.jp/entry/2015/02/09/study-meeting-by-twada_1.html">- クラウドワークス勉強会「レガシーコード改善の戦略と戦術」前篇(戦略)</a> /<a href="https://engineer.crowdworks.jp/entry/2015/02/18/study-meeting-by-twada_2.html"> 後篇(戦術)</a>
+					<br>at<a href="https://engineer.crowdworks.jp/"> CrowdWorks Engineer Blog</a>
+
+					</p>
+				</div>
+			</div>
+			<div class="innerWidth_contents">
+				<div class="content_left zigen">
+					<img src="./image/logo_zigen.png" alt="Zigen"/>
+				</div>
+				<div class="content_right">
+					<h3><a href="https://zigexn.co.jp/">ZIGExN
+					<br><span class="Japanese">株式会社じげん</span></a></h3>
+					<p>
+						<b>Jun. 2011 - Feb. 2013</b>
+						<br>Software Engineer / エンジニア
+						<br>at Tokyo, Japan
+					</p>
+					<p>- Creative Festival 2012 - GRAND PRIZE
+					<br>2012年技術コンテスト 大賞
+					</p>	
+				</div>
+			</div>
+			<div class="innerWidth_contents">
+				<div class="content_left">
+					<img src="./image/logo_worksapplications.jpg" alt="worksapplications"/>
+				</div>
+				<div class="content_right">
+					<h3><a href="https://www.worksap.co.jp/">Works Applications
+					<br><span class="Japanese">株式会社ワークスアプリケーションズ</span></a></h3>
+					<p>
+						<b>Apr. 2010 - Dec. 2010</b>
+						<br>Software Engineer / エンジニア
+						<br>at Tokyo, Japan
+					</p>
+				</div>
+			</div>
+
+			
+		</div>
+		
+		<div class="area03" id="area03">
+			<h2>- EDUCATION -</h2>
+			<div class="innerWidth_contents">
+				<div class="content_left">
+					<img class="image_education" src="./image/logo_university.png" alt="Aoyama Gakuin"/>
+				</div>
+				<div class="content_right">
+					<h3><a href="https://www.aoyama.ac.jp/">Aoyama Gakuin University
+					<br>青山学院大学</a></h3>
+					<p>
+						<b>Apr. 2005 - Mar. 2010</b>
+						<br>B.A. in Economics / 経済学部経済学科
+						<br>at Tokyo, Japan
+					</p>	
+					<p>寄稿記事:
+					<br>- 僕が見たインド
+					<br>at 青山学院大学経済学部 学生記者クラブ
+					</p>
+				</div>
+			</div>
+			<div class="innerWidth_contents">
+				<div class="content_left ">
+					<img class="image_education" src="./image/logo_highschool.png" alt="Fukushima HighSchool"/>
+				</div>
+				<div class="content_right">
+					<h3><a href="https://fukushima-h.fcs.ed.jp/">Fukushima HighSchool
+					<br>福島県立福島高等学校</a></h3>
+					<p>
+						<b>Apr. 2002 - Mar. 2005</b>
+						<br>Science Class / 理系
+						<br>Kendo Club / 剣道部
+						<br>at Fukushima, Japan
+					</p>
+				</div>
+			</div>
+			
+		</div>
+ 		<div class="area04" id="area04">
+ 			<h2>- GET IN TOUCH -</h2>
+		</div>
+		<div class="footer" id="footer">
+			<div class="innerWidth_footer" >
+				<div class="logo">
+					<a href="https://github.com/kibitan">
+						<img  class="footer_github" src="./image/icon_github.webp" alt="github" />
+					</a>
+					<a href="https://www.linkedin.com/in/chikahiro">
+						<img class="footer_Linkedin" src="./image/icon_Linkedin.png" alt="LinledIn" />
+					</a>
+					<a href="http://twitter.com/kibitan">
+						<img class="twitter_x" src="./image/icon_twitter_x.png" alt="x" />
+					</a>
+					<a href="https://chikahirotokoro.com/contact">
+						<img class="contact" src="./image/icon_email.png" alt="email" />
+					</a>
+				</div>				
+				<div class="footer_logo">
+					<a href="chikahirotokoro.com" target="_blank">
+						chikahirotokoro.com
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
