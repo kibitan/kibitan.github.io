@@ -10,7 +10,7 @@ h2{
 .menu{
   position: fixed;
   z-index: 1005;
- 
+
 }
 
 .sp-menu{
@@ -150,7 +150,7 @@ h2{
 
   z-index: 90;
   background-color: #fff;
-  
+
   /* 右端からゆっくり移動するように表示 */
   transition: all 0.5s;
 
@@ -173,7 +173,7 @@ h2{
 }
 
 .navi01, .navi01 a, .navi02, .navi02 a, .navi03, .navi03 a, .navi04, .navi04 a{
-	color:#333;  
+	color:#333;
 }
 
 .header .link ul:after {
@@ -236,7 +236,7 @@ h2{
 
 table{
   margin:5px 0 20px 0;
-  background-color: #FFFFFF; 
+  background-color: #FFFFFF;
 }
 
 td, .tr3{
@@ -318,7 +318,7 @@ td, .tr3{
   left: -1.5%;
 }
 
-#area02 .innerWidth_contents, 
+#area02 .innerWidth_contents,
 #area03 .innerWidth_contents{
   margin-bottom: 7%;
 }
@@ -354,12 +354,12 @@ line-height: 1.6em;
 
 .footer .logo img{
   position: relative;
-  width: 22%;
+  width: 17%;
 }
 
 .footer_github, .footer_Linkedin, .twitter_x{
   float: left;
-  margin-right: 4%;
+  margin-right: 3%;
   position: relative;
 }
 
